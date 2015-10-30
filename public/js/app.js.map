@@ -1,0 +1,1 @@
+{"version":3,"sources":["app.js"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA","file":"app.js","sourcesContent":["function smallModal(message){\n    $('#smallModal').modal('show');\n    $('#smallModalContent').text(message);\n}\n\n"],"sourceRoot":"/source/"}
