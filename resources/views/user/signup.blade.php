@@ -6,7 +6,7 @@
  <div class="initialDiv">
     <div class="row">
         <div class="col-md-12">
-            <h1 class="text-center">Crea tu torneo y administralo ya</h1>
+            <h1 class="text-center">Te debe y no quiere pagar?, anuncialo ya! </h1>
         </div>
     </div>
     <div class="row marginTop-10">
