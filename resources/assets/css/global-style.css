@@ -12,7 +12,7 @@ h1,h2,h3,h4{
     -webkit-font-smoothing: antialiased;
 }
 h1{font-weight: 200; font-size: 50px;}
-.titleColor{color:#f4645f!important;}
+.titleColor{color:#476AAB!important;}
 
 .marginTop-10{
     margin-top:10px ;
@@ -115,12 +115,12 @@ h1{font-weight: 200; font-size: 50px;}
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus,
 .navbar-default .navbar-nav>.active>a:hover{
     color: #fff;
-    background-color: #f4645f;
+    background-color: #476AAB;
 }
 .navbar-nav>li{font-size: 16px}
 
 input[type=submit]{font-weight: bold;}
-.fa{  color: #f4645f; margin-right: 5px;}
+.fa{  color: #476AAB; margin-right: 5px;}
 /*@media only screen and (max-width : 767px) {
     .img-profile{ width: 50px;height: 100%;   }
 }*/
