@@ -6,7 +6,8 @@
  <div class="initialDiv">
     <div class="row">
         <div class="col-md-12">
-            <h1 class="text-center">Te debe y no quiere pagar?, anuncialo ya! </h1>
+            <h2 class="text-center">Te debe y no quiere pagar?<br>
+            publicalo y que no le pase a nadie mas </h2>
         </div>
     </div>
     <div class="row marginTop-10">

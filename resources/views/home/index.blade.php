@@ -6,7 +6,50 @@
  <div class="initialDiv">
     <div class="row">
         <div class="col-md-12">
-            <h1>Home page</h1>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h2 class="titleColor">Ellos deben y no quieren pagar...<small>El buro de credito social</small></h2>
+                    <br>
+                    <div class="row">
+                    <div class="col-md-offset-2 col-md-8">
+                    <ul class="media-list">
+                        @for($i=0;$i<10;$i++)
+                        <li class="media" style="padding:20px;border-bottom:  1px solid #ccc;">
+                            <div class="media-left">
+                                <img class="media-object" src="https://scontent-dfw1-1.xx.fbcdn.net/hprofile-xft1/v/t1.0-1/p160x160/12039712_10207457489173453_464546216391109557_n.jpg?oh=4f6cea9fc696e05348fd3c7b0792ae04&oe=56C565A9">
+
+                            </div>
+                            <div class="media-body">
+                                <h3 class="media-heading">Macaria Sandoval</h3>
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                        <p class="text-justify">
+                                          Esta persona me debe casi 800 pesos por la venta de zapatillas,
+                                        hasta ahora no me ha pagado nada
+                                        </p>
+                                        <a href="#">Leer historia completa...</a>
+                                        </div>
+                                        <div class="col-md-4">
+                                         <ul class="list-unstyled">
+                                            <li><i class="fa fa-map-marker"></i> Mexico DF</li>
+                                            <li><i class="fa fa-dollar"></i>Debe 800.00 MX</li>
+                                            <li><i class="fa fa-calendar"></i>154 dias sin pagar</li>
+                                            <li><i class="fa fa-eye"></i>453 vistas</li>
+                                            <li><i class="fa  fa-comments-o"></i>23 Comentarios</li>
+                                         </ul>
+                                        </div>
+                                    </div>
+
+
+                            </div>
+                            <p class="text-right marginTop-10"><small>Cuando le vas a pagar a: <a href="#">Enrique gonzales - Puebla</a></small></p>
+                        </li>
+                        @endfor
+                    </ul>
+                    </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
  </div>

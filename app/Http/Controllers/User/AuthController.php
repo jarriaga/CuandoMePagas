@@ -210,7 +210,7 @@ class AuthController extends Controller {
         $user->save();
         //send the email with the informacion
         Mail::send('mailing.resetpassword',['nombre'=>$user->firstname,'reset_token'=>'http://'.$_SERVER['SERVER_NAME'].'/reset-password/code/'.$user->resetPassword['reset_token']], function($message) use ($user){
-            $message->from('no-reply@mg.estadiototal.com','EstadioTotal.com');
+            $message->from('no-reply@mg.cuandomepagas.com','CuandoMePagas.com');
             $message->to($user->email);
             $message->subject('Olvidaste tu password');
         });
