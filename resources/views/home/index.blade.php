@@ -22,7 +22,7 @@
                                 </div>
                             </div>
                             <div class="col-md-8 col-sm-8">
-                                <h3 class="media-heading">Macaria Sandoval</h3>
+                                <h3 class="media-heading">Macaria Barron</h3>
                                     <div class="row">
                                         <div class="col-md-8">
                                         <p class="text-justify">
