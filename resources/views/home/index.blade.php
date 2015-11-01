@@ -16,12 +16,12 @@
                         @for($i=0;$i<10;$i++)
                         <li class="media" style="padding:20px;border-bottom:  1px solid #ccc;">
                             <div class="row">
-                            <div class="col-md-4 col-sm-4">
+                            <div class="col-md-3 col-sm-3">
                                 <div class="text-center">
                                     <img class="img-responsive" style="margin: 0 auto;" src="https://scontent-dfw1-1.xx.fbcdn.net/hprofile-xft1/v/t1.0-1/p160x160/12039712_10207457489173453_464546216391109557_n.jpg?oh=4f6cea9fc696e05348fd3c7b0792ae04&oe=56C565A9">
                                 </div>
                             </div>
-                            <div class="col-md-8 col-sm-8">
+                            <div class="col-md-9 col-sm-9">
                                 <h3 class="media-heading firstNameList">Macaria Barron</h3>
                                     <div class="row">
                                         <div class="col-md-8">
