@@ -11,7 +11,7 @@
                     <h2 class="titleColor">Ellos deben y no quieren pagar...<small>El buro de credito social</small></h2>
                     <br>
                     <div class="row">
-                    <div class="col-md-offset-2 col-md-8">
+                    <div class="col-md-offset-1 col-md-10">
                     <ul class="media-list">
                         @for($i=0;$i<10;$i++)
                         <li class="media" style="padding:20px;border-bottom:  1px solid #ccc;">
@@ -22,14 +22,16 @@
                                 </div>
                             </div>
                             <div class="col-md-8 col-sm-8">
-                                <h3 class="media-heading">Macaria Barron</h3>
+                                <h3 class="media-heading firstNameList">Macaria Barron</h3>
                                     <div class="row">
                                         <div class="col-md-8">
                                         <p class="text-justify">
                                           Esta persona me debe casi 800 pesos por la venta de zapatillas,
                                         hasta ahora no me ha pagado nada
                                         </p>
-                                        <a href="#">Leer historia completa...</a>
+                                        <p class="text-right">
+                                            <a href="#">Leer historia completa...</a>
+                                        </p>
                                         </div>
                                         <div class="col-md-4">
                                          <ul class="list-unstyled">

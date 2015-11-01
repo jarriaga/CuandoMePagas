@@ -76,16 +76,14 @@
                </div>
 
               <div class="form-group form-group-lg">
-                <div class="col-sm-offset-3 col-sm-6">
-				    <input class="form-control btn-success" onclick="smallModal('Cargando')" type="submit" name="normalButton" value="Aceptar">
-			    </div>
-			    <div class="row">
-			        <div class="col-md-offset-2 col-md-8">
+                    <div class="col-sm-offset-3 col-sm-6">
+                        <input class="form-control btn-success" onclick="smallModal('Cargando')" type="submit" name="normalButton" value="Aceptar">
+                    </div>
+			        <div class="col-sm-offset-3 col-sm-6 col-md-offset-2 col-md-8">
 			            <p class="marginTop-10 text-center">
                             Al registrarte confirmas que aceptas los Terminos y Condiciones, y la politica de privacidad
                         </p>
                     </div>
-			    </div>
 			  </div>
 
             </form>
