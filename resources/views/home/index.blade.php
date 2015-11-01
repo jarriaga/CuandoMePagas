@@ -15,11 +15,13 @@
                     <ul class="media-list">
                         @for($i=0;$i<10;$i++)
                         <li class="media" style="padding:20px;border-bottom:  1px solid #ccc;">
-                            <div class="media-left">
-                                <img class="media-object" src="https://scontent-dfw1-1.xx.fbcdn.net/hprofile-xft1/v/t1.0-1/p160x160/12039712_10207457489173453_464546216391109557_n.jpg?oh=4f6cea9fc696e05348fd3c7b0792ae04&oe=56C565A9">
-
+                            <div class="row">
+                            <div class="col-md-4 col-sm-4">
+                                <div class="text-center">
+                                    <img class="img-responsive" style="margin: 0 auto;" src="https://scontent-dfw1-1.xx.fbcdn.net/hprofile-xft1/v/t1.0-1/p160x160/12039712_10207457489173453_464546216391109557_n.jpg?oh=4f6cea9fc696e05348fd3c7b0792ae04&oe=56C565A9">
+                                </div>
                             </div>
-                            <div class="media-body">
+                            <div class="col-md-8 col-sm-8">
                                 <h3 class="media-heading">Macaria Sandoval</h3>
                                     <div class="row">
                                         <div class="col-md-8">
@@ -41,6 +43,7 @@
                                     </div>
 
 
+                            </div>
                             </div>
                             <p class="text-right marginTop-10"><small>Cuando le vas a pagar a: <a href="#">Enrique gonzales - Puebla</a></small></p>
                         </li>
