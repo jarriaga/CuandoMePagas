@@ -8,10 +8,11 @@
         <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <h2 class="titleColor">Ellos deben y no quieren pagar...<small>El buro de credito social</small></h2>
-                    <br>
+
                     <div class="row">
                     <div class="col-md-offset-1 col-md-10">
+                    <h2 class="titleColor">Ellos deben y no quieren pagar...<small>El buro de credito social</small></h2>
+                    <br>
                     <ul class="media-list">
                         @for($i=0;$i<10;$i++)
                         <li class="media" style="padding:20px;border-bottom:  1px solid #ccc;">

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -11,9 +11,11 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li @if(Request::is('/')) class="active" @endif ><a href="/">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li @if(Request::is('/')) class="active" @endif ><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
+                <li><a href="#about"><span class="glyphicon glyphicon-info-sign"></span> About</a></li>
+                @if(Auth::check())
+                <li><a href="#"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Crea tu denuncia</a></li>
+                @endif
                 @if(!Auth::check())
                 <li @if(Request::is('signup')) class="active" @endif><a href="{{URL::route('signup')}}">Registrate</a></li>
                 <li @if(Request::is('login')) class="active" @endif><a href="{{URL::route('login')}}">Login</a></li>
@@ -22,7 +24,6 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{Auth::user()->firstname}} <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="{{URL::route('profile',Auth::user()->username)}}"><i class="fa fa-user"></i> Mi Perfil</a></li>
-                        <li><a href="{{URL::route('dashboard')}}"><i class="fa fa-futbol-o"></i> Dashboard </a></li>
                         <li><a href="{{URL::route('logout')}}"><i class="fa fa-power-off"></i> Logout </a></li>
                     </ul>
                 </li>
