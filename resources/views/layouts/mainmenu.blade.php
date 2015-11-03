@@ -1,4 +1,12 @@
-<nav class="navbar navbar-default navbar-fixed-top">
+<div class="headerLogo">
+    <img  src="/images/logo-cuandomepagas.png">
+    <p class="mobileTextHeader"><strong>www.cuandomepagas.com</strong> - Tu buro de credito social</p>
+    <div class="headerText">
+        <h2>Ellos deben y no quieren pagar</h2>
+        <small><strong>www.cuandomepagas.com</strong> - Tu buro de credito social</small>
+    </div>
+</div>
+<nav class="navbar navbar-default ">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -7,7 +15,6 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Cuando Me Pagas?</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">

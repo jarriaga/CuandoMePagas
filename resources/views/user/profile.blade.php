@@ -23,7 +23,7 @@
                             @if(Auth::user() && Auth::user()->_id==$user_profile->_id)
                             <div class="row">
                                 <div class="col-md-12">
-                                <div style="padding:20px;border-bottom:  1px solid #ccc;">
+                                <div class="bottomBorder">
                                     <h2 class="titleColor">Te deben lana? publicalo ya!!!</h2>
                                     <a href="#" class="btn btn-lg btn-primary">
                                         <i class="fa fa-gavel" style="color:#fff;"></i> Me deben

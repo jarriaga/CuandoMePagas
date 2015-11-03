@@ -1,6 +1,6 @@
 /*Global style*/
 body {
-    padding-top: 50px;
+    padding-top: 0px;
     font-family: 'Source Sans Pro',  sans-serif;
     background-color: #f0f2f1;
     color:#525252!important;
@@ -115,12 +115,14 @@ h2{font-weight: 200; font-size: 35px;}
     display: none !important;
 }
 
-.navbar-default{border-bottom: 1px #D2D2D2 solid;}
+.navbar-default{border: 1px #888 solid;}
+.navbar-default{border-bottom: 1px #D2D2D2 solid;background-color: #a4a4a4;}
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus,
 .navbar-default .navbar-nav>.active>a:hover{
     color: #fff;
     background-color: #476AAB;
 }
+.navbar-default .navbar-nav>li>a{color:#fff;}
 .navbar-nav>li{font-size: 16px}
 
 input[type=submit]{font-weight: bold;}
@@ -137,4 +139,19 @@ hr {margin-top: -5px;}
 
 h2 small{font-weight: 200;font-size:18px;}
 h1 small{font-weight: 200;font-size:22px;}
+.bottomBorder{padding:20px;border-bottom:  1px solid #ccc;}
+.headerText{position: absolute;height: 118px;
+    text-align: center;margin-top: 20px;padding-left: 370px;width: 100%}
+.headerText h2{margin-top: 0px;}
+.headerLogo{width: 100%;height:118px;background-color:#f9ef51;}
+.headerLogo img {float:left;}
+.mobileTextHeader{display:none;}
+
+/** Only for logo Header**/
+@media only screen and (max-width: 820px) {
+    .headerText{display: none;}
+    .headerLogo{text-align: center;}
+    .headerLogo img {float:none;height: 90px; width: auto;}
+    .mobileTextHeader{display:block;}
+}
 /*# sourceMappingURL=all.css.map */

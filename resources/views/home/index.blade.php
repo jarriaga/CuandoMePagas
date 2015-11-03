@@ -15,7 +15,7 @@
                     <br>
                     <ul class="media-list">
                         @for($i=0;$i<10;$i++)
-                        <li class="media" style="padding:20px;border-bottom:  1px solid #ccc;">
+                        <li class="media bottomBorder">
                             <div class="row">
                             <div class="col-md-3 col-sm-3">
                                 <div class="text-center">
