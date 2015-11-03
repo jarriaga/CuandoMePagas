@@ -12,6 +12,8 @@ namespace App\Http\Controllers\User;
 
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Models\User;
 
 class DashboardController extends Controller {
 
@@ -21,7 +23,15 @@ class DashboardController extends Controller {
      */
     public function getIndex()
     {
-        return view('user.dashboard');
+        //We get the user information and remove the password and token from the response
+        $user_profile   =   User::findBy(
+            ['_id'    =>  Auth::user()->_id],
+            ['password'  =>  false,'token'  =>  false,  'token' =>  false]
+        );
+        if(!$user_profile)
+            Abort(404);
+
+        return view('user.dashboard',['user_profile'  =>  $user_profile]);
     }
 
 } 

@@ -6,7 +6,7 @@
  <div class="initialDiv">
     <div class="row">
         <div class="col-md-12">
-            <h1 class="text-center">Olvidaste tu password</h1>
+            <h2 class="text-center"><span class="glyphicon glyphicon-cloud"></span> Olvidaste tu password</h2>
         </div>
         <div class="col-md-offset-2 col-md-8">
 

@@ -4,6 +4,7 @@
 
 Route::get('/',['as'    =>  'homepage', function () {   return view('home.index');    }]);
 Route::get('/profile/{username}',['as'  =>  'profile',  'uses'  =>  'User\ProfileController@getIndex']);
+Route::get('/about',['as'  =>  'about',  'uses'  =>  'Pages\StaticPagesController@getAboutPage']);
 
 //Routes for non Authenticated users
 Route::group(['middleware'  =>  'guest'],   function(){

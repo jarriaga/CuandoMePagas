@@ -5,8 +5,8 @@
 <div class="container">
  <div class="initialDiv">
     <div class="row">
-        <div class="col-md-12">
-            <h1 class="text-center">Login</h1>
+        <div class="col-sm-6 col-sm-offset-3">
+            <h2 class="text-center"><span class="glyphicon glyphicon-user"></span> Login<br><small>Ingresa ahora!</small></h2>
         </div>
     </div>
     <div class="row marginTop-10">

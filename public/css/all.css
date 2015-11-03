@@ -134,4 +134,7 @@ hr {margin-top: -5px;}
 @media only screen and (max-width: 767px) {
     .firstNameList{margin-top: 15px;font-size: 35px;text-align: center;}
 }
+
+h2 small{font-weight: 200;font-size:18px;}
+h1 small{font-weight: 200;font-size:22px;}
 /*# sourceMappingURL=all.css.map */

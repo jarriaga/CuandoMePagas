@@ -1,4 +1,4 @@
-@extends('...layouts.master')
+@extends('layouts.master')
 @section('title', 'Perfil')
 
 @section('content')
@@ -20,60 +20,21 @@
 
                         </div>
                         <div class="col-md-9">
+                            @if(Auth::user() && Auth::user()->_id==$user_profile->_id)
                             <div class="row">
                                 <div class="col-md-12">
-                                    <h3 class="titleColor">Estadisticas como jugador</h3>
-
-                                    <table class="table">
-                                        <tr>
-                                            <td>Goles: 68</td>
-                                            <td>Tarjetas amarillas: 12</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Tarjetas rojas: 4</td>
-                                            <td>Fuera de juego: 20</td>
-                                        </tr>
-                                        <tr>
-
-                                            <td>Partidos disputados: 22</td>
-                                            <td>Mas datos: 10</td>
-                                        </tr>
-                                    </table>
+                                <div style="padding:20px;border-bottom:  1px solid #ccc;">
+                                    <h2 class="titleColor">Te deben lana? publicalo ya!!!</h2>
+                                    <a href="#" class="btn btn-lg btn-primary">
+                                        <i class="fa fa-gavel" style="color:#fff;"></i> Me deben
+                                    </a>
                                 </div>
+                               </div>
                             </div>
+                            @endif
                             <div class="row">
                                 <div class="col-md-12">
-                                    <h3 class="titleColor">Jugando en los equipos</h3>
-                                    <hr>
-                                    <div class="row">
-                                        <div class="col-md-2 col-sm-2 col-xs-3">
-                                            <a href="#" class="thumbnail">
-                                                <img src="http://icons.iconarchive.com/icons/giannis-zographos/german-football-club/256/Borussia-Dortmund-icon.png">
-                                            </a>
-                                        </div>
-                                        <div class="col-md-2 col-sm-2 col-xs-3">
-                                            <a href="#" class="thumbnail">
-                                                <img src="http://e1.365dm.com/football/badges/128/880.png">
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <h3 class="titleColor">Participando en los siguientes torneos</h3>
-                                    <hr>
-                                    <p><a href="#"><i class="fa fa-circle-thin colorPrimary" ></i>  Torneo verano 2016 </a></p>
-                                    <p><a href="#"><i class="fa fa-circle-thin colorPrimary" ></i>  Torneo Los amigos  2016</a> </p>
-                                    <p><a href="#"><i class="fa fa-circle-thin colorPrimary" ></i>  Fall season North Dallas</a> </p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <h3 class="titleColor">Administrador del torneo</h3>
-                                    <hr>
+                                    <h4 style="color:#999!important;font-weight: 400">Cuidado! ellos me deben dinero y no me han pagado</h4>
                                 </div>
                             </div>
                         </div>

@@ -98,13 +98,13 @@ class AuthController extends Controller {
         if($result = User::findByFacebookId($fbResponse['id']))
         {
             Auth::loginUsingId($result->getAuthIdentifier());
-            return redirect()->route('dashboard');
+            return redirect()->intended('/profile/'.$result->username);
         }
         //find by email, if found then login that user
         if($data['email']   &&  $result = User::findBy(['email'=>$data['email']])){
             $result->facebook_id = $data['id'];
             Auth::loginUsingId($result->getAuthIdentifier());
-            return redirect()->route('dashboard');
+            return redirect()->intended('/profile/'.$result->username);
         }
         //if the user is new then a new user is created and logged in
         $user       =       new User();
@@ -112,7 +112,7 @@ class AuthController extends Controller {
         if(!$user->save())
             new \Exception('No se pudo crear la cuenta');
         Auth::login($user);
-        return redirect()->route('dashboard');
+        return redirect()->intended('/profile/'.$result->username);
     }
 
     /**
@@ -164,7 +164,7 @@ class AuthController extends Controller {
     {
        $array  =   $request->all();
        if (Auth::attempt(['email' => $array['email'], 'password' => $array['password']]))
-            return redirect()->intended('/dashboard');
+            return redirect()->intended('/profile/'.$result->username);
 
         Session::flash('notify',[
             'type'=>'error',
