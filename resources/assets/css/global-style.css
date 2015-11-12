@@ -140,9 +140,12 @@ hr {margin-top: -5px;}
     .btnMenuMobile{display:block; position: absolute;top: 35px;font-size: 30px;
         margin-left: 20px;border: 1px solid #000;padding: 0px 10px;cursor: pointer;}
     .btnMenuMobile .fa{margin-right: 0px;color:#000;}
-    .menuMobile {display: none;background-color: #000;position: absolute;
+    .menuMobile {display: none;background-color: #000;position: fixed;
         width: 180px;height: 100%;z-index: 99999999;}
 }
+.menuMobile ul{padding-top: 15px;}
+.menuMobile ul li {padding: 20px;font-size: 20px;}
+.menuMobile ul li a {color:#fff;}
 
 h2 small{font-weight: 200;font-size:18px;}
 h1 small{font-weight: 200;font-size:22px;}
