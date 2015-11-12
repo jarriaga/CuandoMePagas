@@ -1,11 +1,17 @@
+<div class="menuMobile">
+
+</div>
+
 <div class="headerLogo">
-    <img  src="/images/logo-cuandomepagas.png">
+    <a href="/"><img  src="/images/logo-cuandomepagas.png"></a>
     <p class="mobileTextHeader"><strong>www.cuandomepagas.com</strong> - Tu buro de credito social</p>
     <div class="headerText">
         <h2>Ellos deben y no quieren pagar</h2>
         <small><strong>www.cuandomepagas.com</strong> - Tu buro de credito social</small>
     </div>
+    <div class="btnMenuMobile" id="btnMenu"><i class="fa fa-bars"></i></div>
 </div>
+
 <nav class="navbar navbar-default ">
     <div class="container">
         <div class="navbar-header">

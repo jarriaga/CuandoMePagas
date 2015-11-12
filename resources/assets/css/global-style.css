@@ -120,7 +120,7 @@ h2{font-weight: 200; font-size: 35px;}
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus,
 .navbar-default .navbar-nav>.active>a:hover{
     color: #fff;
-    background-color: #476AAB;
+    background-color: #000;
 }
 .navbar-default .navbar-nav>li>a{color:#fff;}
 .navbar-nav>li{font-size: 16px}
@@ -132,9 +132,16 @@ input[type=submit]{font-weight: bold;}
 }*/
 hr {margin-top: -5px;}
 .colorPrimary{color: #525252!important;}
-
+.btnMenuMobile,.menuMobile{display: none;}
 @media only screen and (max-width: 767px) {
     .firstNameList{margin-top: 15px;font-size: 35px;text-align: center;}
+    .navbar{display:none;}
+    .headerLogo{border-bottom: 1px #AAA solid;}
+    .btnMenuMobile{display:block; position: absolute;top: 35px;font-size: 30px;
+        margin-left: 20px;border: 1px solid #000;padding: 0px 10px;cursor: pointer;}
+    .btnMenuMobile .fa{margin-right: 0px;color:#000;}
+    .menuMobile {display: none;background-color: #000;position: absolute;
+        width: 180px;height: 100%;z-index: 99999999;}
 }
 
 h2 small{font-weight: 200;font-size:18px;}
@@ -152,5 +159,4 @@ h1 small{font-weight: 200;font-size:22px;}
     .headerText{display: none;}
     .headerLogo{text-align: center;}
     .headerLogo img {float:none;height: 90px; width: auto;}
-    .mobileTextHeader{display:block;}
 }
