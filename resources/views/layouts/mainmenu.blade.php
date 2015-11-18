@@ -16,7 +16,9 @@
 </div>
 
 <div class="headerLogo">
-    <a href="/"><img  src="/images/logo-cuandomepagas.png"></a>
+    <div class="logoDiv">
+        <a href="/"><img  src="/images/logo-cuandomepagas.png"></a>
+    </div>
     <p class="mobileTextHeader"><strong>www.cuandomepagas.com</strong> - Tu buro de credito social</p>
     <div class="headerText">
         <h2>Ellos deben y no quieren pagar</h2>
