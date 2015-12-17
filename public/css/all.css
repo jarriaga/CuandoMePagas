@@ -172,6 +172,7 @@ h1 small{font-weight: 200;font-size:22px;}
     .logoDiv{position: relative;}
     .mobileTextHeader{display:block;}
 }
+.titleProfilePictureModal{text-align: center;margin: 0px;font-size: 30px;}
 @charset "UTF-8";
 
 /*!
@@ -183,8 +184,8 @@ Copyright (c) 2015 Daniel Eden
 */
 
 .animated {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }

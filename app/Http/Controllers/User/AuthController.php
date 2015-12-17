@@ -164,7 +164,7 @@ class AuthController extends Controller {
     {
        $array  =   $request->all();
        if (Auth::attempt(['email' => $array['email'], 'password' => $array['password']]))
-            return redirect()->intended('/profile/'.$result->username);
+            return redirect()->intended('/profile/'.Auth::user()->username);
 
         Session::flash('notify',[
             'type'=>'error',

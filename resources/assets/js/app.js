@@ -25,6 +25,10 @@ $('#btnMenu').click(function(){
     });
 });
 
+$("#updateProfilePictureSpan").click(function(){
+    $('#modalChangeProfilePicture').modal('show');
+});
+
 $(window).resize(function(){
     if($(window).width()>=768) {
         el = $('.menuMobile');

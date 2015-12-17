@@ -24,7 +24,7 @@ Route::group(['middleware'  =>  'guest'],   function(){
 Route::group(['middleware'  =>  'auth'],    function(){
     Route::get('/logout',['as'=>'logout','uses'=>'User\AuthController@getUserLogout']);
     Route::get('/dashboard',['as'   =>  'dashboard',    'uses'  =>  'User\DashboardController@getIndex']);
-
+    Route::post('/profile/picture/upload',['as'   =>  'profile-picture-upload',    'uses'  =>  'User\ProfilePictureController@postUpload']);
     });
 
 

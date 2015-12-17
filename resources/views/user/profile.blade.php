@@ -10,8 +10,13 @@
                     <div class="panel-body">
                         <div class="col-md-3">
                             <div class="img-profile text-center">
-                                @if(isset($user_profile))
+                                 @if(Auth::user() && Auth::user()->_id==$user_profile->_id)
                                     <img class="img-responsive img-thumbnail" src="http://graph.facebook.com/{{$user_profile->facebook_id}}/picture?width=200&height=200">
+                                    <div class="imageModifyButton">
+                                        <a id="updateProfilePictureSpan" href="javascript:void(0)">
+                                            <span >Actualizar foto de perfil</span>
+                                        </a>
+                                    </div>
                                 @endif
                             </div>
                             <h2>{{$user_profile->firstname}}</h2>
@@ -45,6 +50,32 @@
         </div>
     </div>
 </div>
+
+
+@if(Auth::user() && Auth::user()->_id==$user_profile->_id)
+<div class="modal fade" id="modalChangeProfilePicture" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="titleProfilePictureModal">Busca tu foto</h3>
+            </div>
+            <div class="modal-body">
+                <br><br>
+                {!! Form::open( array('url'=>'/profile/picture/upload','method'=>'POST','files'=>true )) !!}
+                <div class="form-group">
+                        {!! Form::file('image')  !!}
+                        <p class="errors">{{ $errors->first('image') }}</p>
+                </div>
+                <br><br>
+                {!! Form::submit('Enviar', array('class'=>'btn btn-success btn-block')) !!}
+                {!! Form::close()  !!}
+            </div>
+        </div>
+    </div>
+</div>
+@endif
+
+
 @endsection
 
 @section('angular')
