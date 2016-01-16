@@ -112,7 +112,7 @@ class AuthController extends Controller {
         if(!$user->save())
             new \Exception('No se pudo crear la cuenta');
         Auth::login($user);
-        return redirect()->intended('/profile/'.$result->username);
+        return redirect()->intended('/profile/'.$user->username);
     }
 
     /**
