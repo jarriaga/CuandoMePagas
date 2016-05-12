@@ -32,9 +32,9 @@ Abstract class MongoDb {
     {
         $cn     =   new \MongoClient();
         if(env('DB_ENV','development')=='development')
-            self::$database=   $cn->selectDB("dbDevCMP01");
+            self::$database=   $cn->selectDB("dbAbbaDev01");
         else
-            self::$database     =   $cn->selectDB("dbProdCMP01");
+            self::$database     =   $cn->selectDB("dbAbbaProd01");
     }
 
     /**
@@ -79,4 +79,4 @@ Abstract class MongoDb {
             return $this->fields[$property];
     }
 
-} 
+}

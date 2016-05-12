@@ -16,5 +16,5 @@ elixir(function(mix) {
     mix.styles(['global-style.css','animate.css'],'public/css/all.css');
     mix.scripts(['app.js'], 'public/js/app.js');
     mix.version(['js/app.js','css/all.css']);
-   /* mix.scripts(['lib/angular-route.js'], 'public/js/lib.js'); */
+    /* mix.scripts(['lib/angular-route.js'], 'public/js/lib.js'); */
 });

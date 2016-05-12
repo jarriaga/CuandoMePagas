@@ -1,13 +1,13 @@
 <div class="menuMobile">
 <ul class="list-unstyled">
     <li @if(Request::is('/')) class="active" @endif ><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
-    <li @if(Request::is('about')) class="active" @endif><a href="{{URL::route('about')}}"><span class="glyphicon glyphicon-info-sign"></span> Acerca de</a></li>
+    <li @if(Request::is('about')) class="active" @endif><a href="#"><span class="glyphicon glyphicon-info-sign"></span> Acerca de</a></li>
     @if(Auth::check())
     <li><a href="#"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Crea tu denuncia</a></li>
     @endif
     @if(!Auth::check())
-    <li @if(Request::is('signup')) class="active" @endif><a href="{{URL::route('signup')}}"><span class="glyphicon glyphicon-hand-up"></span> Registrate</a></li>
-    <li @if(Request::is('login')) class="active" @endif><a href="{{URL::route('login')}}"><span class="glyphicon glyphicon-user"></span> Login</a></li>
+    <li @if(Request::is('signUpPage')) class="active" @endif><a href="{{URL::route('signUpPage')}}"><span class="glyphicon glyphicon-hand-up"></span> Registrate</a></li>
+    <li @if(Request::is('logInPage')) class="active" @endif><a href="{{URL::route('logInPage')}}"><span class="glyphicon glyphicon-user"></span> Login</a></li>
     @else
     <li><a href="{{URL::route('profile',Auth::user()->username)}}"><i class="fa fa-user"></i> Mi Perfil</a></li>
     <li><a href="{{URL::route('logout')}}"><i class="fa fa-power-off"></i> Logout </a></li>
@@ -40,13 +40,13 @@
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li @if(Request::is('/')) class="active" @endif ><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
-                <li @if(Request::is('about')) class="active" @endif><a href="{{URL::route('about')}}"><span class="glyphicon glyphicon-info-sign"></span> Acerca de</a></li>
+                <li @if(Request::is('about')) class="active" @endif><a href="#"><span class="glyphicon glyphicon-info-sign"></span> Acerca de</a></li>
                 @if(Auth::check())
                 <li><a href="#"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Crea tu denuncia</a></li>
                 @endif
                 @if(!Auth::check())
-                <li @if(Request::is('signup')) class="active" @endif><a href="{{URL::route('signup')}}"><span class="glyphicon glyphicon-hand-up"></span> Registrate</a></li>
-                <li @if(Request::is('login')) class="active" @endif><a href="{{URL::route('login')}}"><span class="glyphicon glyphicon-user"></span> Login</a></li>
+                <li @if(Request::is('signUpPage')) class="active" @endif><a href="{{URL::route('signUpPage')}}"><span class="glyphicon glyphicon-hand-up"></span> Registrate</a></li>
+                <li @if(Request::is('logInPage')) class="active" @endif><a href="{{URL::route('logInPage')}}"><span class="glyphicon glyphicon-user"></span> Login</a></li>
                 @else
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{Auth::user()->firstname}} <span class="caret"></span></a>

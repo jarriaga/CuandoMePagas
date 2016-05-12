@@ -31,9 +31,15 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	<!-- Noty js -->
-	<script src="/js/noty/packaged/jquery.noty.packaged.min.js"></script>
-	<script src="/js/noty/themes/relax.js"></script>
+        <!-- Noty js -->
+    <script src="/assets/js/noty/packaged/jquery.noty.packaged.min.js"></script>
+    <!-- <script src="/assets/js/noty/themes/relax.js"></script> -->
+    <script src="/assets/js/app.js"></script>
+
+    <script src="/assets/js/momentjs/moment-with-locales.min.js"></script>
+
+
+
         @yield('angular')
 <script>
 
@@ -55,7 +61,7 @@
 
                 </span>
                 <span>
-                  <img src="/images/loading_dots.gif" width="64" height="64">
+                  <img src="/assets/images/loading_dots.gif" width="64" height="64">
                 </span>
                 </div>
 

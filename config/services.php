@@ -15,8 +15,8 @@ return [
     */
 
     'mailgun' => [
-        'domain' => env('MAILGUN_DOMAIN','mg.estadiototal.com'),
-        'secret' => env('MAILGUN_SECRET','key-91feyp5r7e-794dd09lvk01j0s6zoti7'),
+        'domain' => env('MAILGUN_DOMAIN'),
+        'secret' => env('MAILGUN_SECRET'),
     ],
 
     'mandrill' => [
