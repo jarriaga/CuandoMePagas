@@ -1,2 +1,0 @@
-# CuandoMePagas
-cuandomepagas.com
