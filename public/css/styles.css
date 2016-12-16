@@ -1,0 +1,197 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+/**
+.bg-img {
+    width: 100%;
+    height: 100%;
+    background: url('../images/background-carpintero.jpeg') center center no-repeat;
+    background-size: cover;
+}
+**/
+
+.img-center{
+    margin: 0 auto;
+}
+.wrapper-content{
+    position: relative;
+    z-index: 99;
+    margin-top: 10%;
+}
+.wrapper-app{
+    position: relative;
+    z-index: 99;
+}
+.btn{
+    font-weight: 300!important;
+}
+
+.btn-info{
+    background-color: #00afb7;
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(0,47,75,0.5); /*dim the background*/
+}
+
+.btn-landing{
+    font-size: 14px;
+    min-height: 134px;
+}
+
+
+.navbar-brand{
+    padding: 0 15px;
+}
+.navbar {
+    min-height: 80px;
+}
+.navbar-nav>li>a {
+    font-weight:bold;
+    line-height: 51px;
+}
+
+.navbar-homepage{
+    background-color: rgba(248, 248, 251, 0.9);
+    border-color: #e7e7e7;
+}
+
+.white-color{
+    color:#fff;
+}
+
+.profile-image{
+    position: absolute;
+    bottom: -65px;
+    left: 100px;
+}
+
+.profile-image img{
+    width: 125px;
+    background-color: #fff;
+    border:2px solid #fff;
+}
+
+.profile-image-user img{
+    width: 125px;
+    background-color: #fff;
+}
+.m-zero{
+    margin-top: 0px;
+}
+
+.profile-cover{
+    background: url('https://placehold.it/1200x300/CCC/?text=Sube tu portada') center center no-repeat;
+    background-color: #fff;
+    min-height: 250px;
+    background-size: cover;
+    position: relative;
+}
+.profile-left{
+    margin-top: 80px;
+}
+.review-block-title{
+    margin: 10px 0px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.review-block-rate{
+    color:#ffc000;
+}
+.review-block-date{
+    font-size: 12px;
+}
+
+.font14{font-size: 14px;}
+.panel-heading{
+    font-size: 16px;
+}
+.marginTB5{
+    margin: 5px 0px;
+}
+
+
+#fileselector {
+    margin: 10px;
+}
+#upload-file-selector {
+    display:none;
+}
+.margin-correction {
+    margin-right: 10px;
+}
+.category-selector {
+    background-color: #f5f8fa;
+    border: 1px solid #EEE;
+    padding: 0px 5px;
+    font-size: 12px;
+    margin:5px 0px;
+    line-height: 60px;
+    height: 60px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+}
+.category-checked{
+    width: 20px;
+    position: absolute;
+    height:auto;
+    top:5px;
+    left:5px;
+    display: none;
+}
+.category-selector.active{
+    background-color: #ef4449;
+    color: #fff;
+    font-weight: bold;
+}
+
+.category-selector.active img{
+    display: block;
+}
+.facebook-login{
+    color: #fff;
+    max-width: 250px;
+    position: relative;
+    width: 200px;
+    margin: 0 auto;
+}
+
+
+@media all and (max-width:768px) {
+        .container {
+            min-width: 320px;
+        }
+
+        .title {
+            font-size: 40px;
+        }
+        .wrapper-content{
+            margin-top: 10%;
+        }
+        .btn-landing {
+            min-height: 80px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .btn-landing h2 {
+            font-size: 20px;
+            margin: 5px;
+            font-weight: 600;
+        }
+        .category-selector {
+            float: none;
+            width: 100%;
+            margin: 10px 0px;
+        }
+    }
+
