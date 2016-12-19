@@ -12,7 +12,7 @@
                             <div class="col-md-4">
                                 <div class="profile-image-user text-center">
                                     @if($user->profileImage)
-                                        <img src="{{asset('storage/profiles/'.$user->profileImage)}}" class="img-rounded" >
+                                        <img src="{{ \App\Http\Controllers\ImageController::getUrl('/profiles/'.$user->profileImage)}}" class="img-rounded" >
                                     @else
                                         <img src="/images/profile/default-user.png"  >
                                     @endif
@@ -43,8 +43,7 @@
                                     <hr>
                                     <em>Mis intereses:</em>
                                     <div>
-                                        @if(count($user->catego
-                                        ries)>0)
+                                        @if(count($user->categories)>0)
                                             @foreach($user->categories as $category)
                                                 <span class="label label-info">{{$category->name}}</span>
                                             @endforeach

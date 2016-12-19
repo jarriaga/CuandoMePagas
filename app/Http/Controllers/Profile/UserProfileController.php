@@ -10,6 +10,7 @@ namespace App\Http\Controllers\Profile;
 
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\ImageController;
 use App\User;
 use Illuminate\Http\File;
 use Illuminate\Http\Request;
@@ -97,14 +98,14 @@ class UserProfileController extends Controller
 				$image = Image::make ( storage_path().'/app/'.$filename )->orientate();
 				$image =$image->fit(200);
 				//delete the temp file
-				Storage::delete($filename);
+				ImageController::delete($filename);
 				//save the new user file
 				$filename = str_random(10) . '.jpg';
-				Storage::disk('public')->put('profiles/' . $filename, $image->stream('jpg', 70));
+				ImageController::save('/profiles/'.$filename,$image->stream('jpg',70));
 
 				//Delete the old image
-				if($user->profileImage && Storage::disk('public')->exists('profiles/'.$user->profileImage))
-					Storage::disk('public')->delete('profiles/'.$user->profileImage);
+				if($user->profileImage && ImageController::exist('profiles/'.$user->profileImage))
+					ImageController::delete('profiles/'.$user->profileImage);
 			}
 		}catch( \Exception $error){
 			Log::error($error->getMessage());

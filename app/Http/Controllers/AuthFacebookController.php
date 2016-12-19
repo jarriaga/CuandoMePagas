@@ -7,6 +7,7 @@ use GuzzleHttp\Exception\RequestException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 use Intervention\Image\Facades\Image;
@@ -145,11 +146,13 @@ class AuthFacebookController extends Controller
 	 */
 	private function saveImageFromUrl($url)
 	{
-		$filename = str_random(10) . '.jpg';
+		$name = str_random(10) . '.jpg';
 		//resize to 200px
 		$image = Image::make(str_replace('normal','large',$url))->fit(200);
-		Storage::disk('public')->put('profiles/' . $filename, $image->stream('jpg'));
-		return $filename;
+		$image->save(public_path($name));
+		ImageController::save('/profiles/',$name,public_path($name));
+		unlink(public_path($name));
+		return $name;
 	}
 
 

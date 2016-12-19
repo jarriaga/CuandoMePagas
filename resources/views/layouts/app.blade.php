@@ -45,7 +45,7 @@
 
                 <!-- Branding Image -->
                <!-- <a class="navbar-brand" href="{{ url('/') }}"> -->
-                    <a  class="navbar-brand" href="/"><img src="/images/checalo-250x250.png" style="width:80px;height: auto"></a>
+                    <a  class="navbar-brand" href="/"><img src="https://s3-us-west-2.amazonaws.com/cuandomepagas/images/logo-cmp.png" ></a>
 
                <!-- </a> -->
             </div>

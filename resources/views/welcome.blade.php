@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>ChécaloAquí.com</title>
+        <title>Cuando me pagas?</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:300,500" rel="stylesheet" type="text/css">
@@ -29,7 +29,7 @@
                 font-weight: 100;
                 margin: 0;
                 /*css for full size background image*/
-                background: url('../images/background-carpintero.jpg') no-repeat center right fixed;
+                background: url('https://s3-us-west-2.amazonaws.com/cuandomepagas/images/pay-background.jpg') no-repeat center right fixed;
                 -webkit-background-size: cover;
                 -moz-background-size: cover;
                 -o-background-size: cover;
@@ -77,7 +77,7 @@
             }
 
             .title {
-                font-size: 64px;
+                font-size: 54px;
                 color: #fff;
                 margin-bottom: 50px;
             }
@@ -93,6 +93,7 @@
                 margin-top: 30px;
                 text-transform: uppercase;
             }
+
 
         </style>
         <link href="/css/styles.css" rel="stylesheet" type="text/css">
@@ -113,7 +114,7 @@
 
                     <!-- Branding Image -->
                     <!-- <a class="navbar-brand" href="{{ url('/') }}"> -->
-                    <a  class="navbar-brand" href="/"><img src="images/checalo-250x250.png" style="width:80px;height: auto"></a>
+                    <a  class="navbar-brand" href="/"><img src="https://s3-us-west-2.amazonaws.com/cuandomepagas/images/logo-cmp.png" ></a>
 
                     <!-- </a> -->
                 </div>
@@ -132,20 +133,39 @@
                 </div>
             </div>
         </nav>
-        <div class="container ">
+        <div class="container min500">
             <div class="wrapper-content">
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1">
                         <div class="title m-b-md text-center">
-                            Buscas el mejor precio?<br>
-                            <p class="white-color text-center font14">La comunidad digital que conecta servicios y productos con personas como tú, que buscan el mejor
-                                precio!</p>
+                            Ellos deben y no quieren pagar?<br>
+                            <p class="white-color text-center font14">Denúncialos aquí para que NO le pase a alguien más, El buró de crédito social!</p>
                         </div>
 
 
                     </div>
                 </div>
                 <div class="row">
+                    <div class="col-md-12">
+                       <p class="white-color text-center">
+                       </p>
+                    </div>
+                    <form>
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="col-md-9 marginT10">
+                                <input type="text" class="form-control input-lg" placeholder="Busca a esa persona o empresa que debe">
+                            </div>
+                            <div class="col-md-3 marginT10" >
+                                <button type="submit" class="btn btn-lg btn-success btn-block" >
+                                    <i class="fa fa-search"></i> Buscar
+                                </button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="row hide">
+
                         <div class="col-md-4 col-md-offset-1 col-sm-6 text-center">
                             <a class="btn btn-lg btn-block btn-success btn-landing" href="{{ url('/register') }}">
                                 <br>Quieres cazar las mejores ofertas?<br>
@@ -161,6 +181,7 @@
                                 <h2><i class="fa fa-rocket" aria-hidden="true"></i> Click aquí</h2>
                             </a>
                         </div>
+
                 </div>
             </div>
 
