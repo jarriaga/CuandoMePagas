@@ -20,7 +20,7 @@
                                 @if($owner)
                                 <div class="text-center marginTB5">
                                     <a href="{{ route('editUserProfile',['name'=>str_slug( Auth::user()->name),'id'=> Auth::user()->id])  }}"
-                                       class="btn btn-success btn-sm btn-block">Editar perfil</a>
+                                     >Editar perfil</a>
                                 </div>
                                 @endif
                                 <h3 class="text-center marginTB5">{{ $user->name }}</h3>
@@ -39,19 +39,7 @@
                                       <small>{{trans('app.MessageAboutMe')}}</small>
                                     @endif
                                 </p>
-                                @if($owner)
-                                    <hr>
-                                    <em>Mis intereses:</em>
-                                    <div>
-                                        @if(count($user->categories)>0)
-                                            @foreach($user->categories as $category)
-                                                <span class="label label-info">{{$category->name}}</span>
-                                            @endforeach
-                                        @else
-                                            <small>{{trans('app.MesssageCategories')}}</small>
-                                        @endif
-                                    </div>
-                                @endif
+
                             </div>
                             <!-- Central Part -->
                             <div class="col-md-8">
@@ -61,21 +49,13 @@
                                     <div class="row">
                                         <div class="col-md-12">
 
-                                            <!-- Nav tabs -->
-                                            <ul class="nav nav-tabs nav-justified" role="tablist" id="user-tabs">
-                                                <li role="presentation" class="active"><a href="#reviews" aria-controls="reviews" role="tab" data-toggle="tab">{{ trans('app.Reviews') }}</a></li>
-                                                <li role="presentation"><a href="#favorites" aria-controls="favorites" role="tab" data-toggle="tab">{{trans('app.Favorites')}}</a></li>
-                                                <li role="presentation"><a href="#biz" aria-controls="favorites" role="tab" data-toggle="tab">{{trans('app.Biz')}}</a></li>
-
-                                            </ul>
 
                                             <!-- Tab panes -->
                                             <div class="tab-content">
+                                                    <h3 class="text-center"><i class="fa fa-bomb"></i> {{trans('app.Complaints')}}</h3>
                                                 <!----- Reviews Panel---->
-                                                <div role="tabpanel" class="tab-pane active" id="reviews">
+                                                <div role="tabpanel" class="tab-pane active" id="complaints">
                                                    <br>
-
-
                                                     <div class="review-block">
                                                         @for($i=0;$i<10;$i++)
                                                         <div class="row">
@@ -106,19 +86,6 @@
                                                 </div>
                                                 <!---- / Reviews Panel -->
 
-
-                                                <!--- Favorites Panel --->
-                                                <div role="tabpanel" class="tab-pane" id="favorites">
-                                                                    favoritos
-                                                </div>
-                                                <!---- / Favorites Panel --->
-
-
-                                                <!-- Biz Panel -->
-                                                <div role="tabpanel" class="tab-pane" id="biz">
-                                                    Biz
-                                                </div>
-                                                <!-- / Biz Panel -->
                                             </div>
 
                                         </div>
@@ -133,12 +100,7 @@
 @endsection
 
 @section('javascript')
-    <script>
-        jQuery(document).ready(function(){
-            $('#user-tabs a').click(function (e) {
-                e.preventDefault()
-                $(this).tab('show')
-            });
-        });
-    </script>
+
+
+
 @endsection

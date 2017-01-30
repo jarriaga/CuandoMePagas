@@ -40,8 +40,9 @@
 <body>
 <div class="container">
     <div class="content">
-        <a href="/"><img src="/images/checalo-250x250.png" width="200"></a>
+        <a href="/"><img src="https://s3-us-west-2.amazonaws.com/cuandomepagas/images/logo-cmp.png" ></a>
         <div class="title">Parece que te has perdido,<br> La página que buscas no existe.</div>
+        <div class="title">404</div>
     </div>
 </div>
 </body>

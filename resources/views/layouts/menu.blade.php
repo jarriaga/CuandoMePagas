@@ -14,6 +14,11 @@
                 </a>
             </li>
             <li>
+                <a href="{{ route('createComplaint',['id'=> Auth::user()->id])  }}">
+                    {{trans('app.CreateComplaint')}}
+                </a>
+            </li>
+            <li>
                 <a href="{{ url('/logout') }}"
                    onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">

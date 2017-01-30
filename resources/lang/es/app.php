@@ -37,7 +37,9 @@ return [
 	'Error505' => 'Ocurrio un error, por favor intente nuevamente',
 	'ProfileSaveSuccess'=>'Tu perfil se ha actualizado correctamente',
 	'FacebookPermissionsFail'=>'Debes aceptar los permisos de la aplicación para poder registrarte',
-	'FacebookUpdateEmail'=> 'Proporciona tu email para continuar con tu registro'
+	'FacebookUpdateEmail'=> 'Proporciona tu email para continuar con tu registro',
+	'Complaints'=> 'Denuncias',
+	'CreateComplaint' => 'Crear Denuncia'
 
 
 ];
