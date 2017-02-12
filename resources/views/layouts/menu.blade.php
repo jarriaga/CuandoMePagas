@@ -14,7 +14,7 @@
                 </a>
             </li>
             <li>
-                <a href="{{ route('createComplaint',['id'=> Auth::user()->id])  }}">
+                <a href="{{ route('createComplaint')  }}">
                     {{trans('app.CreateComplaint')}}
                 </a>
             </li>

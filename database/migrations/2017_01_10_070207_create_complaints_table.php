@@ -21,6 +21,19 @@ class CreateComplaintsTable extends Migration
             $table->string('name');
             $table->integer('amount');
             $table->date('dateLoan');
+            $table->string('facebook')->nullable();
+            $table->string('twitter')->nullable();
+            $table->string('country')->nullable();
+            $table->string('state')->nullable();
+            $table->string('city')->nullable();
+            $table->string('city2')->nullable();
+            $table->string('photo')->nullable();
+            $table->tinyInteger('published')->default(0);
+
+            //foreign key
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
+
         });
     }
 

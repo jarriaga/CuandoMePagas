@@ -23,7 +23,7 @@ Route::get('/test',function(){
 Route::group(['middleware'=>'auth'],function(){
     Route::get('/profile/{name}/{id}/edit','Profile\\UserProfileController@editUserProfile')->name('editUserProfile');
     Route::post('/profile/user/update','Profile\\UserProfileController@postUpdateProfile')->name('postUpdateProfile');
-    Route::get('/complaint/{id}/create','Complaint\\ComplaintController@createComplaint')->name('createComplaint');
+    Route::get('/complaint/create','Complaint\\ComplaintController@createComplaint')->name('createComplaint');
     Route::post('/complaint/create','Complaint\\ComplaintController@postCreate')->name('postCreateComplaint');
 });
 

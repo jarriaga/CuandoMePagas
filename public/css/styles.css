@@ -187,6 +187,11 @@ html, body {
     background-color: #fff;
 }
 
+.img-complaint{
+    max-width: 80px;
+}
+
+/**==================================================== Media query ========= */
 @media all and (max-width:768px) {
         .container {
             min-width: 320px;
@@ -217,4 +222,4 @@ html, body {
         }
     }
 
-
+/*================================================= End media query ================*/

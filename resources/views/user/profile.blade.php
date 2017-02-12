@@ -57,11 +57,12 @@
                                                 <div role="tabpanel" class="tab-pane active" id="complaints">
                                                    <br>
                                                     <div class="review-block">
-                                                        @for($i=0;$i<10;$i++)
+                                                        @foreach($user->complaints as $complaint)
                                                         <div class="row">
                                                             <div class="col-sm-3">
-                                                                <img src="http://dummyimage.com/60x60/F24/ffffff&text=No+Image" class="img-rounded">
-                                                                <div class="review-block-name"><a href="#">El oferton</a></div>
+                                                                <img src="{{  \App\Http\Controllers\Images\ComplaintImage::getUrl( $complaint->photo )}}"
+                                                                     class="img-responsive img-rounded img-complaint">
+                                                                <div class="review-block-name"><a href="#">{{$complaint->name}}</a></div>
                                                                 <div class="review-block-date">Enero 29, 2016<br/>hace 1 día</div>
                                                             </div>
                                                             <div class="col-sm-9">
@@ -77,10 +78,7 @@
                                                             </div>
                                                         </div>
                                                         <hr/>
-                                                            @endfor
-
-
-
+                                                            @endforeach
 
                                                     </div>
                                                 </div>
@@ -91,6 +89,8 @@
                                         </div>
                                     </div>
                             </div>
+                            <!-- / central part -->
+
                         </div>
                     </div>
                 </div>

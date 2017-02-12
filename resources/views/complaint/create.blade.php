@@ -22,6 +22,13 @@
                                             <p class="marginTB20 text-justify">Esta comunidad las haces tú la hacemos todos, entre más información proporciones
                                                 en tu denuncia ayudarás a que no le pase esto a alguien más...</p>
 
+                                            @if(count($errors)>0)
+                                                <div class="alert alert-danger">
+                                            @foreach ($errors->all() as $message)
+                                                    <p>{{$message}}</p>
+                                            @endforeach
+                                                </div>
+                                            @endif
                                             <form id="complaintForm" method="post" action="{{ route('postCreateComplaint')  }}" enctype="multipart/form-data" >
                                                 {{ csrf_field()  }}
                                                 <div class="form-group">
@@ -41,7 +48,7 @@
                                                 </div>
 
                                                 <div class="form-group" >
-                                                    <label>*Nombre <small>(persona o empresa que te debe)</small>:</label>
+                                                    <label>*Nombre del deudor <small>(persona o empresa que te debe)</small>:</label>
                                                     <input type="text" class="form-control" name="name" placeholder="Escribe el nombre de la persona o empresa que te debe dinero" required>
                                                 </div>
 
@@ -59,6 +66,13 @@
                                                     <label>*Recuerdas cuando prestaste o hiciste el trabajo?:</label>
                                                     <input type="text" class="form-control" name="dateLoan" id="dateLoan" required>
                                                 </div>
+
+
+                                                <div class="form-group" >
+                                                    <label>Email del deudor <small>no enviaremos ningun correo a menos que tú lo solicites (opcional)</small>:</label>
+                                                    <input type="email" class="form-control" name="email" placeholder="Escribe el email del deudor">
+                                                </div>
+
 
                                                 <div class="form-group">
                                                     <label><i class="fa fa-facebook-square"></i> Facebook del deudor:</label>
@@ -93,19 +107,22 @@
                                                 </div>
 
                                                 <div class="form-group">
-                                                    <label class="control-label">{{trans('app.City')}}: <small>(teclea la ciudad)</small></label>
+                                                    <label class="control-label">*{{trans('app.City')}}: <small>(teclea la ciudad)</small></label>
                                                         <input type="text" class="form-control" id="autocomplete" name="city2" value="" required>
                                                 </div>
 
-                                               <span id="fileselector">
+                                                <div>
+                                                     <span id="fileselector">
                                                     <label class="btn btn-default btn-sm" for="upload-file-selector">
-                                                        <input name="images[]" multiple id="upload-file-selector"   accept="image/*" type="file">
-                                                        <i class="fa fa-upload margin-correction"></i>Subir imagenes
+                                                        <input name="image" id="upload-file-selector"   accept="image/*" type="file">
+                                                        <i class="fa fa-upload margin-correction"></i>Selecciona una foto
                                                     </label>
-                                                </span>
+                                                     </span>
+                                                </div>
 
-
-                                                <img id="profileImage" src="/images/profile/default-user.png" style="width:100px;" class="img-rounded">
+                                                <div class="text-center">
+                                                    <img id="profileImage" src="/images/profile/default-user.png" style="max-width:300px;margin: 20px auto;height: auto;" class="img-rounded">
+                                                </div>
 
 
                                                 <br>
@@ -138,6 +155,14 @@
     <script>
 
         jQuery(document).ready(function(){
+
+            //avoid submit by enter
+            $(window).keydown(function(event){
+                if(event.keyCode == 13) {
+                    event.preventDefault();
+                    return false;
+                }
+            });
 
             $.datepicker.regional['es'] = {
                 closeText: 'Cerrar',
@@ -226,6 +251,7 @@
                 $('.error-facebook').remove();
                 //check facebook url
                 var error = false;
+
                 $('input[name^=facebook]').each(function(){
                     if($(this).val()){
                         var expFacebook = /((http:|https:)\/\/|www\.)+facebook\.com\/[\w]+/g;
@@ -238,7 +264,6 @@
                     }
                 });
 
-                var error = false;
                 $('input[name^=twitter]').each(function(){
                     if($(this).val()){
                         var expTwitter = /((http:|https:)\/\/|www\.)+twitter\.com\/[\w]+/g;
@@ -251,10 +276,12 @@
                     }
                 });
 
-                if(error){return false;}
+                if(!error){
+                    $(this).attr('submit',true);
+                    $(this).submit();
+                }
 
-                $(this).attr('submit',true);
-                $(this).submit();
+
             });
 
         });

@@ -12,7 +12,7 @@ use Illuminate\Http\File;
 use Illuminate\Support\Facades\Storage;
 
 
-class ImageController
+abstract class ImageController
 {
 
 	static private $environment ;
@@ -23,22 +23,29 @@ class ImageController
 
 
 	/**
-	 * Save file into a s3 bucket
-	 * @param $path
+	 * Save an image in their respective folder depends of the subclasses
+	 *
+	 * @param $folder
+	 * @param $filename
 	 * @param $file
+	 * @return mixed
 	 */
-	public static function save($folder,$name, $filename)
+	public static function put($file,$folder,$filename)
 	{
-		//dd($file);
-		Storage::disk('s3')->putFileAs(self::setEnvironment().$folder,new File($filename),$name,'public');
-
-	//	Storage::disk('s3')->put('/'.self::setEnvironment().$path,	$file,'public');
+		return Storage::disk('s3')->put(self::setEnvironment().$folder.$filename,$file);
 	}
 
 
+	/**
+	 *	Get Image Url from s3 bucket
+	 *
+	 * @param $filename
+	 * @return mixed
+	 */
+
 	public static function  getUrl($filename)
 	{
-		return Storage::url(self::setEnvironment().$filename);
+		return Storage::disk('s3')->url(self::setEnvironment().$filename);
 	}
 
 	/**
@@ -52,6 +59,11 @@ class ImageController
 		return Storage::disk('s3')->exists($path);
 	}
 
+
+	/**
+	 * Delete file from s3 bucket
+	 * @param $path
+	 */
 	public static function delete($path)
 	{
 		Storage::disk('s3')->delete($path);
