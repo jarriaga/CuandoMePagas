@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Images\ProfileImage;
 use App\User;
 use GuzzleHttp\Exception\RequestException;
 use Illuminate\Http\Request;
@@ -74,7 +75,7 @@ class AuthFacebookController extends Controller
 			}
 			//otherwise then create a new user with the information and log in that user
 			// redirect to the dashboard
-			$profileImage = ($image)? $this->saveImageFromUrl($image):null;
+			$profileImage = ($image)? (ProfileImage::put(str_replace('normal','large',$image))):null;
 			$user = User::create([
 				'name' => $name,
 				'email' => $email,
@@ -137,22 +138,6 @@ class AuthFacebookController extends Controller
 		session()->forget('fb_facebookid');
 		session()->forget('fb_profileImage');
 		return redirect('/home');
-	}
-
-	/**
-	 * This method save the profile image from facebook
-	 * @param $url
-	 * @return string
-	 */
-	private function saveImageFromUrl($url)
-	{
-		$name = str_random(10) . '.jpg';
-		//resize to 200px
-		$image = Image::make(str_replace('normal','large',$url))->fit(200);
-		$image->save(public_path($name));
-		ImageController::save('/profiles/',$name,public_path($name));
-		unlink(public_path($name));
-		return $name;
 	}
 
 

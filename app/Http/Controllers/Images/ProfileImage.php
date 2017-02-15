@@ -12,15 +12,15 @@ use App\Http\Controllers\ImageController;
 use Intervention\Image\Facades\Image;
 
 
-class ComplaintImage extends ImageController
+class ProfileImage extends ImageController
 {
 
-	private static  $folder = '/complaint-image/';
+	private static  $folder = '/profiles/';
 
 
 	/**
 	 *
-	 * Function to save a complaint user image into the S3 amazon
+	 * Function to save a profiles image into the S3 amazon
 	 *
 	 * @param $file
 	 * @param string $folder
@@ -33,7 +33,7 @@ class ComplaintImage extends ImageController
 		//generate the file with intervention
 		$image = Image::make($file);
 		//scale and encode image
-		$stream = $image->fit(500)->encode('jpg',80);
+		$stream = $image->fit(200)->encode('jpg',80);
 		//create a random filename
 		$filename=str_random().'.jpg';
 		//call parent methodi in the ImageController class
