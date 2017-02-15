@@ -36,7 +36,7 @@ class AuthFacebookController extends Controller
 	{
 		try{
 			//using the socialite driver
-			$user = Socialite::driver('facebook')->user();
+			$user = Socialite::with('facebook')->user();
 
 			session()->forget('fb_name');
 			session()->forget('fb_facebookid');
