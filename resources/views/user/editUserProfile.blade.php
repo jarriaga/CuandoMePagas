@@ -103,27 +103,6 @@
                               </div>
 
                                 <div class="col-md-12">
-                                    <h5 class="text-center">Selecciona los productos o servicios que son de tu interés:</h5>
-                                   <div class="categories">
-                                       @foreach(\App\Category::where('parent','=',0)->cursor() as $category)
-                                         <div class="col-md-4">
-                                             <?php $selected = false;
-                                                    foreach($user->categories as $cat){
-                                                        if($cat->id == $category->id){
-                                                            $selected=true;
-                                                            break;
-                                                        }
-                                                    }
-                                             ?>
-
-                                             <div class="category-selector {{($selected)?"active":""}}" category-id="{{$category->id}}">
-                                                 <img class="category-checked" src="/images/profile/checked2.png" >
-                                                 {{$category->name}}
-                                             </div>
-                                         </div>
-                                       @endforeach
-                                       <div class="clearfix"></div>
-                                   </div>
 
                                     <div class="form-group">
                                         <div class="col-sm-offset-2 col-sm-8 text-center">

@@ -44,4 +44,17 @@ class Complaint extends Model
 	{
 		return $this->belongsToMany('App\User');
 	}
+
+	public function getDateInDays()
+	{
+		$date = Carbon::createFromFormat('Y-m-d',$this->dateLoan);
+		return $date->diffInDays(Carbon::now());
+	}
+
+	public function getDateFormat()
+	{
+		Carbon::setLocale('es');
+		$date = Carbon::createFromFormat('Y-m-d',$this->dateLoan);
+		return $date->toFormattedDateString();
+	}
 }
