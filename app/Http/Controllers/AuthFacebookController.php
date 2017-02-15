@@ -20,9 +20,9 @@ class AuthFacebookController extends Controller
 	 * This method generates the URL login direction
 	 * @return mixed
 	 */
-	public function redirectToProvider()
+	public function redirectToProvider(Request $request)
 	{
-		return Socialite::driver('facebook')->redirect();
+		return Socialite::with('facebook')->redirect();
 	}
 
 
