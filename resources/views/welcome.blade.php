@@ -5,6 +5,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
+        <meta property="og:title" content="Cuando me pagas?" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://www.cuandomepagas.com" />
+        <meta property="og:image" content="https://s3-us-west-2.amazonaws.com/cuandomepagas/images/logo-cmp.png" />
+        <meta property="og:description" content="Denúncialos aquí para que NO le pase a alguien más, El buró de crédito social!">
+
+
         <title>Cuando me pagas?</title>
 
         <!-- Fonts -->
