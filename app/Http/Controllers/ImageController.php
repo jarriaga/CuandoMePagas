@@ -56,7 +56,7 @@ abstract class ImageController
 
 	public static function exist($path)
 	{
-		return Storage::disk('s3')->exists($path);
+		return Storage::disk('s3')->exists(self::setEnvironment().$path);
 	}
 
 
@@ -66,7 +66,7 @@ abstract class ImageController
 	 */
 	public static function delete($path)
 	{
-		return Storage::disk('s3')->delete($path);
+		return Storage::disk('s3')->delete(self::setEnvironment().$path);
 	}
 
 }
