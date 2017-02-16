@@ -15,7 +15,7 @@ class Complaint extends Model
 
 	public function setDateLoanAttribute($value)
 	{
-		$this->attributes['dateLoan'] = Carbon::createFromFormat('d/m/Y',$value);
+		$this->attributes['dateLoan'] = Carbon::createFromFormat('d/m/Y',$value)->toDateString();
 	}
 
 
