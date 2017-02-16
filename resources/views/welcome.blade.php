@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
+        <meta property="fb:app_id" content="1207799069234551">
         <meta property="og:title" content="Cuando me pagas?" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="http://www.cuandomepagas.com" />
