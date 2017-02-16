@@ -29,8 +29,13 @@
     <link href="/css/styles.css" rel="stylesheet" type="text/css">
     <link href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css">
 
+    @include('layouts.gtm')
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T9BQ9HN"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 
     <nav class="navbar navbar-default navbar-static-top">

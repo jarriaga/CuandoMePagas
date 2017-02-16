@@ -107,8 +107,14 @@
         </style>
         <link href="/css/styles.css" rel="stylesheet" type="text/css">
 
+        @include('layouts.gtm')
+
     </head>
-    <body >
+    <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T9BQ9HN"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
         <div class="overlay"></div>
         <nav class="navbar navbar-default navbar-static-top navbar-homepage">
             <div class="container">
