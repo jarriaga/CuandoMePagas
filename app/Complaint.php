@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Complaint extends Model
 {
 
+	use TimezoneAccessor;
+
 	protected $fillable = ['story','typeComplaint','name','amount','dateLoan','country',
 		'state','city','city2','published','facebook','twitter','photo'];
 
