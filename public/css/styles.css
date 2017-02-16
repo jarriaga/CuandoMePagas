@@ -206,9 +206,10 @@ html, body {
 
 }
 .complaint-image-view{
-    max-width: 300px;
+    max-width: 200px;
     height: auto;
     margin: 50px auto;
+
 }
 /**==================================================== Media query ========= */
 @media all and (max-width:768px) {
