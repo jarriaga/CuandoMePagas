@@ -8,6 +8,8 @@
 
 namespace  App;
 
+use Carbon\Carbon;
+
 trait TimezoneAccessor
 {
 	public function getMutatedTimestampValue($value)
@@ -15,11 +17,8 @@ trait TimezoneAccessor
 
 		$timezone = config('app.timezone');
 
-		if (Auth::check() && Auth::user()->timezone) {
-			$timezone = Auth::user()->timezone;
-		}
 		return Carbon::parse($value)
-			->timezone($timezone);
+			->toDateString();
 	}
 
 	public function getCreatedAtAttribute($value)
@@ -31,4 +30,14 @@ trait TimezoneAccessor
 	{
 		return $this->getMutatedTimestampValue($value);
 	}
+
+	 public function setCreatedAtAttribute($value)
+        {
+                $this->attributes['created_at']=$this->getMutatedTimestampValue($value);
+        }
+
+        public function setUpdatedAtAttribute($value)
+        {
+                $this->attributes['updated_at']= $this->getMutatedTimestampValue($value);
+        }
 }
