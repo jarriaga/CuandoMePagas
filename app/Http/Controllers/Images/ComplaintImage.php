@@ -47,7 +47,11 @@ class ComplaintImage extends ImageController
 
 	public static function getUrl($filename)
 	{
-		return parent::getUrl(self::$folder.$filename);
+		if($filename){
+			return parent::getUrl(self::$folder.$filename);
+		}else{
+			return parent::getUrl('/default-user.png');
+		}
 	}
 
 

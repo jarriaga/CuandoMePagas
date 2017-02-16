@@ -11,7 +11,7 @@
                         @foreach($complaints as $complaint)
                             <div class="row">
                                 <div class="col-sm-2">
-                                    <img src="{{  \App\Http\Controllers\Images\ComplaintImage::getUrl( $complaint->photo )}}"
+                                    <img src="{{   \App\Http\Controllers\Images\ComplaintImage::getUrl( $complaint->photo )}}"
                                          class="img-responsive img-rounded img-complaint">
 
                                 </div>
