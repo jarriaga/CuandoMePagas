@@ -201,6 +201,9 @@ html, body {
     font-weight:normal;
     margin-left: 10px;
 }
+.text-debe{
+    color:#4fbb50;
+}
 /**==================================================== Media query ========= */
 @media all and (max-width:768px) {
         .container {
