@@ -33,7 +33,7 @@
                                 </div>
                                 <div class="col-md-3">
                                     <ul class="list-group-item-info list-info">
-                                        <li><i class="fa fa-map-marker"></i> {{$complaint->city. " ".$complaint->state}}</li>
+                                        <li><i class="fa fa-map-marker"></i> {{ empty($complaint->city)?$complaint->city2:$complaint->city." ".$complaint->state}}</li>
                                         <li><i class="fa fa-calendar"></i> {{ $complaint->getDateInDays()  }} dias sin pagar</li>
                                     </ul>
                                 </div>
