@@ -11,6 +11,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
 
+
     <meta property="og:title" content="Cuando me pagas?" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://www.cuandomepagas.com" />
