@@ -205,6 +205,11 @@ html, body {
     color:#4fbb50;
 
 }
+.complaint-image-view{
+    max-width: 300px;
+    height: auto;
+    margin: 50px auto;
+}
 /**==================================================== Media query ========= */
 @media all and (max-width:768px) {
         .container {

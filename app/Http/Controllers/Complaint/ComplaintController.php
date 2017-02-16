@@ -57,4 +57,11 @@ class ComplaintController extends Controller
 		return view('complaint.create');
 	}
 
+
+	public function viewComplaint($id, Request $request)
+	{
+		$complaint = Complaint::findOrFail($id);
+		return view('complaint.view')->with(['complaint'=>$complaint]);
+	}
+
 }

@@ -25,11 +25,11 @@
                                         <i class="fa fa-star-o fa-lg" aria-hidden="true"></i>
                                     </div>
                                     -->
-                                    <div class="review-block-title"><a href="#">{{$complaint->name}}</a><span class="date-loan">No ha pagado desde {{$complaint->getDateFormat()}}</span>
+                                    <div class="review-block-title"><a href="{{  route('viewComplaint',['id'=>$complaint->id]) }}">{{$complaint->name}}</a><span class="date-loan">No ha pagado desde {{$complaint->getDateFormat()}}</span>
                                     <p class="text-debe">Debe: <i class="fa fa-dollar"></i> {{number_format($complaint->amount,2,'.',',')}}</p></div>
 
                                     <div class="review-block-description">{{str_limit($complaint->story,150)}}</div>
-                                    <div class="pull-right"><a href="#">Leer historia completa ></a></div>
+                                    <div class="pull-right"><a href="{{  route('viewComplaint',['id'=>$complaint->id]) }}">Leer historia completa ></a></div>
                                 </div>
                                 <div class="col-md-3">
                                     <ul class="list-group-item-info list-info">

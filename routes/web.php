@@ -27,6 +27,8 @@ Route::group(['middleware'=>'auth'],function(){
     Route::post('/profile/user/update','Profile\\UserProfileController@postUpdateProfile')->name('postUpdateProfile');
     Route::get('/complaint/create','Complaint\\ComplaintController@createComplaint')->name('createComplaint');
     Route::post('/complaint/create','Complaint\\ComplaintController@postCreate')->name('postCreateComplaint');
+
+    Route::get('/complaint/{id}','Complaint\\ComplaintController@viewComplaint')->name('viewComplaint');
 });
 
 
