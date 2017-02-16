@@ -21,7 +21,7 @@
 
                                             <h3 class="text-center text-capitalize text-primary ">Ten cuidado con {{$complaint->name}}</h3>
 
-                                            <h4 class="text-center">Acompañame aleer esta triste historia:</h4>
+                                            <h4 class="text-center">Acompañame a leer esta triste historia:</h4>
 
                                             <img src="{{  \App\Http\Controllers\Images\ComplaintImage::getUrl($complaint->photo)}}" class="img-responsive complaint-image-view">
 
