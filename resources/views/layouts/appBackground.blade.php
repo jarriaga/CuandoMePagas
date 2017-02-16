@@ -10,6 +10,14 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+
+    <meta property="og:title" content="Cuando me pagas?" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.cuandomepagas.com" />
+    <meta property="og:image" content="https://s3-us-west-2.amazonaws.com/cuandomepagas/images/logo-cmp.png" />
+    <meta property="og:description" content="Denúncialos aquí para que NO le pase a alguien más, El buró de crédito social!">
+
+
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
