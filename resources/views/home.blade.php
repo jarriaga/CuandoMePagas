@@ -10,12 +10,12 @@
                     <div class="review-block">
                         @foreach($complaints as $complaint)
                             <div class="row">
-                                <div class="col-sm-2">
+                                <div class="col-md-2">
                                     <img src="{{   \App\Http\Controllers\Images\ComplaintImage::getUrl( $complaint->photo )}}"
                                          class="img-responsive img-rounded img-complaint">
 
                                 </div>
-                                <div class="col-sm-6">
+                                <div class="col-md-6">
                                     <!--
                                     <div class="review-block-rate">
                                         <i class="fa fa-star fa-lg" aria-hidden="true"></i>

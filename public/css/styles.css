@@ -205,6 +205,8 @@ html, body {
     color:#4fbb50;
 
 }
+
+
 .complaint-image-view{
     max-width: 300px;
     height: auto;
@@ -212,6 +214,16 @@ html, body {
 
 }
 /**==================================================== Media query ========= */
+
+@media all and (max-width:992px) {
+    .img-complaint{
+        width: 100%;
+        height: auto;
+        max-width: 200px;
+        margin: 20px auto;
+    }
+}
+
 @media all and (max-width:768px) {
         .container {
             min-width: 320px;
@@ -240,6 +252,7 @@ html, body {
             width: 100%;
             margin: 10px 0px;
         }
+
     }
 
 /*================================================= End media query ================*/
