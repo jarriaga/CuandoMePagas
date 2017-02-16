@@ -60,6 +60,8 @@ class Handler extends ExceptionHandler
             return response()->json(['error' => 'Unauthenticated.'], 401);
         }
 
+        $request->session()->flash('flash-warning',trans('app.registerToSee'));
+
         return redirect()->guest('login');
     }
 }

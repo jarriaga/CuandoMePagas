@@ -39,7 +39,8 @@ return [
 	'FacebookPermissionsFail'=>'Debes aceptar los permisos de la aplicación para poder registrarte',
 	'FacebookUpdateEmail'=> 'Proporciona tu email para continuar con tu registro',
 	'Complaints'=> 'Denuncias',
-	'CreateComplaint' => 'Crear Denuncia'
+	'CreateComplaint' => 'Crear Denuncia',
+	'registerToSee'=>'Crea tu cuenta o inicia sesion para poder ver la lista de Deudores'
 
 
 ];

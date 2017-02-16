@@ -12,7 +12,7 @@
                             <div class="col-md-3">
                                 <div class="profile-image-user text-center">
                                     @if($user->profileImage)
-                                        <img src="{{ \App\Http\Controllers\ImageController::getUrl('/profiles/'.$user->profileImage)}}"  class="img-circle img-responsive" >
+                                        <img src="{{ \App\Http\Controllers\Images\ProfileImage::getUrl($user->profileImage)}}"  class="img-circle img-responsive" >
                                     @else
                                         <img src="/images/profile/default-user.png" class="img-circle img-responsive" >
                                     @endif

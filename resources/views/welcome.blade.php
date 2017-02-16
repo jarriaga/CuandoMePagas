@@ -150,7 +150,7 @@
                        <p class="white-color text-center">
                        </p>
                     </div>
-                    <form>
+                    <form  action="{{ route('search') }}">
                         <div class="col-md-8 col-md-offset-2">
                             <div class="col-md-9 marginT10">
                                 <input type="text" class="form-control input-lg" placeholder="Busca a esa persona o empresa que debe">
@@ -164,25 +164,7 @@
 
                     </form>
                 </div>
-                <div class="row hide">
 
-                        <div class="col-md-4 col-md-offset-1 col-sm-6 text-center">
-                            <a class="btn btn-lg btn-block btn-success btn-landing" href="{{ url('/register') }}">
-                                <br>Quieres cazar las mejores ofertas?<br>
-                                <h2><i class="fa fa-shopping-cart" aria-hidden="true"></i> Click aquí</h2>
-                            </a>
-                        </div>
-                        <div class="col-md-2">
-
-                        </div>
-                        <div class="col-md-4 col-sm-6 text-center">
-                            <a class="btn btn-lg btn-block btn-warning btn-landing">
-                                Quieres anunciar tu negocio o servicios,<br> y llevarlo al siguiente nivel?
-                                <h2><i class="fa fa-rocket" aria-hidden="true"></i> Click aquí</h2>
-                            </a>
-                        </div>
-
-                </div>
             </div>
 
         </div>

@@ -66,7 +66,7 @@ abstract class ImageController
 	 */
 	public static function delete($path)
 	{
-		Storage::disk('s3')->delete($path);
+		return Storage::disk('s3')->delete($path);
 	}
 
 }

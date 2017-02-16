@@ -118,6 +118,10 @@
     @if (session('flash-error'))
         toastr.error('{{ session('flash-error') }}', 'Error');
     @endif
+
+     @if (session('flash-warning'))
+        toastr.warning('{{ session('flash-warning') }}', '');
+    @endif
 </script>
 </body>
 </html>

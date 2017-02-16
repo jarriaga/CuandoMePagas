@@ -52,7 +52,7 @@ class AuthFacebookController extends Controller
 			$user = User::where('facebookId',$facebookId)->first();
 			if($user){
 				Auth::login($user);
-				return redirect('/home');
+				return redirect()->route('search');
 			}
 			//Second validation verify the email and log in if exists
 			$user = User::where('email',$email)->first();
@@ -60,7 +60,7 @@ class AuthFacebookController extends Controller
 				$user->facebookId = $facebookId;
 				$user->save();
 				Auth::login($user);
-				return redirect('/home');
+				return redirect()->route('search');
 			}
 
 			// If the user has not provided an email then return to
@@ -70,7 +70,7 @@ class AuthFacebookController extends Controller
 				session([
 					'fb_facebookid'=>$facebookId,
 					'fb_name'=>$name,
-					'fb_profileImage'=>$image]);
+					'fb_profileImage'=>str_replace('normal','large',$image)]);
 					return redirect()->route('facebookUpdateEmail');
 			}
 			//otherwise then create a new user with the information and log in that user
@@ -84,7 +84,7 @@ class AuthFacebookController extends Controller
 			]);
 			//log in the new user
 			Auth::login($user);
-			return redirect('/home');
+			return redirect()->route('search');
 
 		}catch(RequestException $e){
 			//if something is wrong, return to the login with flash error message
@@ -123,7 +123,7 @@ class AuthFacebookController extends Controller
 			return redirect()->route('facebookUpdateEmail')->withInput()->withErrors($validator);
 
 		//save and create the new user
-		$profileImage = (session('fb_profileImage'))? $this->saveImageFromUrl(session('fb_profileImage')):null;
+		$profileImage = (session('fb_profileImage'))? ProfileImage::put(session('fb_profileImage')):null;
 
 		$user =  User::create([
 			'name' => session('fb_name'),
@@ -137,7 +137,7 @@ class AuthFacebookController extends Controller
 		session()->forget('fb_name');
 		session()->forget('fb_facebookid');
 		session()->forget('fb_profileImage');
-		return redirect('/home');
+		return redirect()->route('search');
 	}
 
 

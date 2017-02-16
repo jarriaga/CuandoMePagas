@@ -15,12 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test',function(){
-   return view('test');
-});
+
 
 /** Routes for Logged in users ******************************/
 Route::group(['middleware'=>'auth'],function(){
+
+    Route::get('/search', 'HomeController@index')->name('search');
+
+
     Route::get('/profile/{name}/{id}/edit','Profile\\UserProfileController@editUserProfile')->name('editUserProfile');
     Route::post('/profile/user/update','Profile\\UserProfileController@postUpdateProfile')->name('postUpdateProfile');
     Route::get('/complaint/create','Complaint\\ComplaintController@createComplaint')->name('createComplaint');
@@ -40,6 +42,5 @@ Route::get('/profile/{name}/{id}','Profile\\UserProfileController@getUserProfile
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
 
 

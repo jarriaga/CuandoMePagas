@@ -10,6 +10,7 @@
 
                     <div class="row">
                         <div class="col-md-12 text-center">
+                            <p>Regístrate usando tu cuenta de facebook</p>
                             <a href="{{route('facebookLogin')}}">
                                 <img src="/images/facebook-login.png" class="facebook-login">
                             </a>
@@ -48,12 +49,17 @@
                         </div>
 
                         <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
+                            <div class="col-md-3 col-md-offset-4">
                                 <div class="checkbox">
                                     <label>
                                         <input type="checkbox" name="remember"> {{trans('app.RememberMe')}}
                                     </label>
                                 </div>
+                            </div>
+                            <div class="col-md-3">
+                                <a class="btn btn-link" href="{{ url('/password/reset') }}">
+                                    {{trans('app.ForgotYourPassword')}}
+                                </a>
                             </div>
                         </div>
 
@@ -63,13 +69,17 @@
                                     {{trans('buttons.Login')}}
                                 </button>
 
-                                <a class="btn btn-link" href="{{ url('/password/reset') }}">
-                                    {{trans('app.ForgotYourPassword')}}
-                                </a>
+
                             </div>
                         </div>
                     </form>
-
+                    <div class="row">
+                        <div class="col-md-12 text-right">
+                            <a class="btn btn-link " href="{{ url('/register') }}">
+                                Regístrate con tu email
+                            </a>
+                        </div>
+                    </div>
 
                 </div>
             </div>

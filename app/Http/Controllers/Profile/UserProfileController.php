@@ -11,6 +11,7 @@ namespace App\Http\Controllers\Profile;
 
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\ImageController;
+use App\Http\Controllers\Images\ProfileImage;
 use App\User;
 use Illuminate\Http\File;
 use Illuminate\Http\Request;
@@ -53,8 +54,8 @@ class UserProfileController extends Controller
 		if(Auth::user()->id != $user->id)
 			abort(404);
 		//get the countres names
-		$countries = include_once __DIR__.'/../../Functions/Countries.php';
-		return view('user.editUserProfile')->with(['user'=>$user,'countries'=>$countries]);
+		//$countries = include_once __DIR__.'/../../Functions/Countries.php';
+		return view('user.editUserProfile')->with(['user'=>$user]);
 	}
 
 
@@ -77,11 +78,11 @@ class UserProfileController extends Controller
 
 		//Find the user if exist before update
 		$user = User::findOrFail(Auth::user()->id);
+		/*   save categories
 		$user->categories()->detach();
 		if($request->input('categories') && is_array($request->input('categories'))){
 			$user->categories()->attach($request->input('categories'));
-		}
-		//dd($request->all());
+		}*/
 		try{
 			//If has file
 			if ($request->hasFile('profilePicture') && $request->file('profilePicture')->isValid()) {
@@ -92,20 +93,11 @@ class UserProfileController extends Controller
 				if($validator->fails())
 					return back()->withInput()->withErrors($validator);
 
-				//save temp file
-				$filename = Storage::putFile('public/profiles', Input::file('profilePicture'));
-				//resize to 200px
-				$image = Image::make ( storage_path().'/app/'.$filename )->orientate();
-				$image =$image->fit(200);
-				//delete the temp file
-				ImageController::delete($filename);
-				//save the new user file
-				$filename = str_random(10) . '.jpg';
-				ImageController::save('/profiles/'.$filename,$image->stream('jpg',70));
+				$fileName = ProfileImage::put(Input::file('profilePicture'));
 
 				//Delete the old image
-				if($user->profileImage && ImageController::exist('profiles/'.$user->profileImage))
-					ImageController::delete('profiles/'.$user->profileImage);
+				if($user->profileImage && ProfileImage::exist($user->profileImage))
+					ProfileImage::delete($user->profileImage);
 			}
 		}catch( \Exception $error){
 			Log::error($error->getMessage());
@@ -120,7 +112,7 @@ class UserProfileController extends Controller
 		$user->city = $request->input('city',$user->city);
 		$user->city2 = $request->input('city2',$user->city);
 		$user->birthday = (empty($request->input('birthday')))?null:$request->input('birthday');
-		$user->profileImage = isset($filename)?$filename:$user->profileImage;
+		$user->profileImage = isset($fileName)?$fileName:$user->profileImage;
 		$user->save();
 
 
