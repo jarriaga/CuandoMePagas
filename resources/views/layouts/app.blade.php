@@ -25,7 +25,7 @@
 
 
 
-    <link href="/css/app.css" rel="stylesheet">
+    <link href="/css/app.css" rel="stylesheet"  type="text/css">
     <link href="/css/styles.css" rel="stylesheet" type="text/css">
     <link href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css">
 

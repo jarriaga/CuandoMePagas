@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+    <style>
+        .modal-text{  font-family: 'Oswald',sans-serif;padding:20px;font-size:16px;  }
+    </style>
 <div class="container">
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
