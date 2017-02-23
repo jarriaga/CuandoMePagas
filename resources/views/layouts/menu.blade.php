@@ -10,19 +10,19 @@
         <ul class="dropdown-menu" role="menu">
             <li>
                 <a href="{{ route('getUserProfile',['name'=>str_slug( Auth::user()->name),'id'=> Auth::user()->id])  }}">
-                    {{trans('app.Profile')}}
+                   <i class="fa fa-user"></i> {{trans('app.Profile')}}
                 </a>
             </li>
             <li>
                 <a href="{{ route('createComplaint')  }}">
-                    {{trans('app.CreateComplaint')}}
+                    <i class="fa fa-pencil-square-o"></i>   {{trans('app.CreateComplaint')}}
                 </a>
             </li>
             <li>
                 <a href="{{ url('/logout') }}"
                    onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
-                    {{trans('app.Logout')}}
+                    <i class="fa fa-power-off"></i> {{trans('app.Logout')}}
                 </a>
 
                 <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">

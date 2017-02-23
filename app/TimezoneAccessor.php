@@ -17,6 +17,7 @@ trait TimezoneAccessor
 
 		$timezone = config('app.timezone');
 
+
 		return Carbon::parse($value)
 			->toDateString();
 	}
@@ -31,13 +32,23 @@ trait TimezoneAccessor
 		return $this->getMutatedTimestampValue($value);
 	}
 
-	 public function setCreatedAtAttribute($value)
-        {
-                $this->attributes['created_at']=$this->getMutatedTimestampValue($value);
-        }
+	public function setCreatedAtAttribute($value)
+	{
+			$this->attributes['created_at']=$this->getMutatedTimestampValue($value);
+	}
 
-        public function setUpdatedAtAttribute($value)
-        {
-                $this->attributes['updated_at']= $this->getMutatedTimestampValue($value);
-        }
+	public function setUpdatedAtAttribute($value)
+	{
+			$this->attributes['updated_at']= $this->getMutatedTimestampValue($value);
+	}
+
+	public function setDeletedAtAttribute($value)
+	{
+			$this->attributes['deleted_at']= $this->getMutatedTimestampValue($value);
+	}
+
+	public function getDeletedAtAttribute($value)
+	{
+		return $this->getMutatedTimestampValue($value);
+	}
 }

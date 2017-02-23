@@ -29,6 +29,8 @@
                                     <p class="text-debe">Debe: <i class="fa fa-dollar"></i> {{number_format($complaint->amount,2,'.',',')}}</p></div>
 
                                     <div class="review-block-description">{{str_limit($complaint->story,150)}}</div>
+                                    <p class="pull-right"><small>Publicado por {{$complaint->user->name}}</small></p>
+                                    <div class="clearfix"></div>
                                     <div class="pull-right"><a href="{{  route('viewComplaint',['id'=>$complaint->id]) }}">Leer historia completa ></a></div>
                                 </div>
                                 <div class="col-md-3">
