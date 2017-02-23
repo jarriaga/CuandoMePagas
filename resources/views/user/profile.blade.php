@@ -123,7 +123,9 @@
 @endsection
 
 @section('javascript')
-
+    <style>
+        .modal-text{  font-family: 'Oswald',sans-serif;padding:20px;font-size:16px;  }
+    </style>
     <div class="modal fade" data-backdrop="false" id ="deleteModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
         <div class="modal-dialog modal-sm" role="document">
             <div class="modal-content">
